@@ -277,7 +277,7 @@ public class SAMLConfigurer extends SecurityConfigurerAdapter<DefaultSecurityFil
 
 	private SAMLAuthenticationProvider samlAuthenticationProvider(WebSSOProfileConsumerImpl webSSOProfileConsumer) {
 		SAMLAuthenticationProvider samlAuthenticationProvider = new SAMLAuthenticationProvider();
-		samlAuthenticationProvider.setForcePrincipalAsString(false);
+		samlAuthenticationProvider.setForcePrincipalAsString(true);
 		samlAuthenticationProvider.setSamlLogger(samlLogger);
 		samlAuthenticationProvider.setConsumer(webSSOProfileConsumer);
 		samlAuthenticationProvider.setUserDetails(this.samlUserDetailsService);
